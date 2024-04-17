@@ -1,4 +1,4 @@
-FROM dunglas/frankenphp:sha-d4c313f-php8.2
+FROM dunglas/frankenphp:sha-a910e39-php8.2
 
 LABEL org.opencontainers.image.source=https://github.com/mumincacao/waltonphp
 LABEL org.opencontainers.image.licenses="MIT"
