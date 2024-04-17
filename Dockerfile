@@ -1,4 +1,4 @@
-FROM dunglas/frankenphp:sha-a910e39-php8.2
+FROM dunglas/frankenphp:sha-a910e39-php8.2 AS base
 
 LABEL org.opencontainers.image.source=https://github.com/mumincacao/waltonphp
 LABEL org.opencontainers.image.licenses="MIT"
@@ -11,3 +11,6 @@ RUN apt-get update \
     && apt-get -y autoremove \
     && apt-get clean
 COPY --from=composer:2.6 /usr/bin/composer /usr/bin/composer
+
+FROM base AS dev
+RUN install-php-extensions pcov xdebug

@@ -15,3 +15,5 @@
 - opcache
 - pdo_mysql
 - zip
+- pcov (dev のみ)
+- xdebug (dev のみ)
