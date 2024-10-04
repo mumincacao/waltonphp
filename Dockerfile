@@ -3,7 +3,7 @@ FROM dunglas/frankenphp:1.2.2-php8.2.21 AS base
 LABEL org.opencontainers.image.source=https://github.com/mumincacao/waltonphp
 LABEL org.opencontainers.image.licenses="MIT"
 
-ENV SERVER_NAME :80
+ENV SERVER_NAME=:80
 RUN apt-get update \
     && apt-get upgrade -y \
     && apt-get install -y git zip mariadb-client \
