@@ -1,4 +1,4 @@
-FROM dunglas/frankenphp:1.11.1-php8.2.30 AS base
+FROM dunglas/frankenphp:1.12.1-php8.3.30 AS base
 
 LABEL org.opencontainers.image.source=https://github.com/mumincacao/waltonphp
 LABEL org.opencontainers.image.licenses="MIT"
@@ -16,9 +16,9 @@ FROM base AS dev
 RUN install-php-extensions pcov xdebug
 
 
-FROM dunglas/frankenphp:static-builder-musl-1.11.1 AS builder
+FROM dunglas/frankenphp:static-builder-musl-1.12.1 AS builder
 
-ARG PHP_VERSION=8.2.30
+ARG PHP_VERSION=8.3.30
 
 WORKDIR /go/src/app
 RUN MIMALLOC=1 \
