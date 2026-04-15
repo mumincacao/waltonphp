@@ -10,7 +10,7 @@ RUN apt-get update \
     && install-php-extensions gd opcache pdo_mysql zip \
     && apt-get -y autoremove \
     && apt-get clean
-COPY --from=composer:2.6 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:2.9.7 /usr/bin/composer /usr/bin/composer
 
 FROM base AS dev
 RUN install-php-extensions pcov xdebug
